@@ -49,12 +49,15 @@ jobs:
               cicd/ecs-task-definition.json > cicd/rendered-task-definition.json
 
       - name: Register ECS task definition
+        id: register-task-definition
         run: |
-          aws ecs register-task-definition --cli-input-json file://cicd/rendered-task-definition.json
+          TASK_DEFINITION_ARN=$(aws ecs register-task-definition --cli-input-json file://cicd/rendered-task-definition.json --query "taskDefinition.taskDefinitionArn" --output text)
+          echo "TASK_DEFINITION_ARN=$TASK_DEFINITION_ARN" >> $GITHUB_ENV
 
       - name: Update ECS service to use the new task definition
         env:
           CLUSTER: ${{ secrets.AWS_ECS_CLUSTER }}
           SERVICE: ${{ secrets.AWS_ECS_SERVICE }}
+          TASK_DEFINITION_ARN: ${{ env.TASK_DEFINITION_ARN }}
         run: |
-          aws ecs update-service --cluster $CLUSTER --service $SERVICE --force-new-deployment --region ${{ secrets.AWS_REGION }}
+          aws ecs update-service --cluster $CLUSTER --service $SERVICE --task-definition $TASK_DEFINITION_ARN --force-new-deployment --region ${{ secrets.AWS_REGION }}
