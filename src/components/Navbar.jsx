@@ -119,7 +119,7 @@ const Navbar = () => {
           </a>
           <a
             className='text-gray-300'
-            href='../assets/MihirPatel-FullStackFusions.pdf' download
+            href='../assets/MIHIR_PATEL_Lead_Software_Developer.pdf' download
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -127,7 +127,7 @@ const Navbar = () => {
           </a>
           <a
             className='text-gray-300'
-            href='https://www.youtube.com/@fullstackfusions-t4t'
+            href='https://www.youtube.com/@fullstackfusions'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -148,7 +148,7 @@ const Navbar = () => {
       <div className='hidden lg:flex fixed flex-col top-[30%] left-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-            <a 
+            <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://www.linkedin.com/in/fullstackfusions/'
               target='_blank'
@@ -158,7 +158,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-            <a 
+            <a
               className='flex justify-between items-center w-full text-gray-300'
               href='https://github.com/fullstackfusions'
               target='_blank'
@@ -170,7 +170,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#e11a1a]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.youtube.com/@fullstackfusions-t4t'
+              href='https://www.youtube.com/@fullstackfusions'
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -199,7 +199,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#5685ea]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/MihirPatel-FullStackFusions.pdf' download
+              href='/MIHIR_PATEL_Lead_Software_Developer.pdf' download
               target='_blank'
               rel='noopener noreferrer'
             >
